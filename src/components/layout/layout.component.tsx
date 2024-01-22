@@ -1,43 +1,13 @@
 'use client';
 
-import {
-  CalendarOutlined,
-  DollarOutlined,
-  MedicineBoxOutlined,
-  SnippetsOutlined,
-} from '@ant-design/icons';
 import React, { useEffect, useState } from 'react';
 import styles from './layout.module.scss';
 import HeaderComponent from '../shared/header/header.component';
-import LayoutCardComponent, {
-  LayoutCardComponentType,
-} from './layout-card/layout-card.component';
+import LayoutCardComponent from './layout-card/layout-card.component';
+import { layoutItems } from '@/app/constants/layout';
 
 const LayoutComponent = () => {
   const [loading, setLoading] = useState(true);
-
-  const items: LayoutCardComponentType[] = [
-    {
-      icon: CalendarOutlined,
-      title: 'Agendamentos',
-      description: 'Visualização de agendamentos',
-    },
-    {
-      icon: SnippetsOutlined,
-      title: 'Laudos',
-      description: 'Visualização de laudos médicos',
-    },
-    {
-      icon: MedicineBoxOutlined,
-      title: 'Procedimentos',
-      description: 'Procedimentos médicos realizados',
-    },
-    {
-      icon: DollarOutlined,
-      title: 'Pagamentos',
-      description: 'Visualização de pagamentos, boletos, etc...',
-    },
-  ];
 
   useEffect(() => {
     setTimeout(() => {
@@ -49,7 +19,7 @@ const LayoutComponent = () => {
     <div className={styles.layout}>
       <HeaderComponent />
       <div className={styles.layout__list}>
-        {items.map((item, index) => (
+        {layoutItems.map((item, index) => (
           <LayoutCardComponent
             key={index}
             icon={item.icon}
