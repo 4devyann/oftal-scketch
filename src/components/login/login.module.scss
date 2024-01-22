@@ -1,0 +1,12 @@
+.login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  * {
+    transition: 0.2s ease-in-out;
+  }
+}

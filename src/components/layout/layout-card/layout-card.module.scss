@@ -1,0 +1,19 @@
+.card {
+  width: 100%;
+  max-width: 300px;
+  min-height: 119.14px;
+
+  // height: 119.14px;
+
+  &__icon {
+    font-size: 48px;
+  }
+
+  &__actions {
+    &__text {
+      &:hover {
+        color: #1677ff;
+      }
+    }
+  }
+}

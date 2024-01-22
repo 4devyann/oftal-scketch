@@ -1,0 +1,11 @@
+.layout {
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    padding: 1rem;
+
+    gap: 1rem;
+  }
+}
