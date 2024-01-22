@@ -29,7 +29,7 @@ const LayoutComponent = () => {
     },
     {
       icon: MedicineBoxOutlined,
-      title: 'Procedimentos Médicos',
+      title: 'Procedimentos',
       description: 'Procedimentos médicos realizados',
     },
     {
