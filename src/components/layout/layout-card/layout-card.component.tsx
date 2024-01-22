@@ -1,17 +1,9 @@
 import React from 'react';
-import styles from './layout-card.module.scss';
-import Icon from '@ant-design/icons/lib/components/Icon';
-import { Button, Card, Skeleton, Space, Typography } from 'antd';
+import { Card, Skeleton } from 'antd';
 import Meta from 'antd/es/card/Meta';
+import Icon from '@ant-design/icons/lib/components/Icon';
 import { useTheme } from 'antd-style';
-import {
-  SettingOutlined,
-  EditOutlined,
-  EllipsisOutlined,
-  EyeOutlined,
-} from '@ant-design/icons';
-
-const { Text } = Typography;
+import styles from './layout-card.module.scss';
 
 type LayoutCardComponentProps = {
   loading: boolean;

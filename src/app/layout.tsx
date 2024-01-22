@@ -14,6 +14,12 @@ const theme: ThemeConfig = {
   token: {
     fontSize: 16,
   },
+  components: {
+    Card: {
+      boxShadowTertiary: 'none',
+      borderRadius: 0,
+    },
+  },
 };
 
 export default function RootLayout({

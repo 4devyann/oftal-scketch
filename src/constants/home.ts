@@ -1,6 +1,7 @@
-import { CalendarOutlined, DollarOutlined, MedicineBoxOutlined, SnippetsOutlined } from '@ant-design/icons';
+import { AimOutlined, CalendarOutlined, ClockCircleOutlined, DollarOutlined, MailOutlined, MedicineBoxOutlined, SnippetsOutlined } from '@ant-design/icons';
 
 import MedicineImage from '../assets/images/undraw_medicine_heart.svg'
+import { ContactUsComponentType } from '@/components/home/components/contact-us/contact-us.component';
 
 export type HomeItemType = {
   title: string;
@@ -49,3 +50,21 @@ export const homeItems: HomeItemType[] = [
   //   invert: true
   // },
 ];
+
+export const contactUsItems: ContactUsComponentType[] = [
+  {
+    icon: MailOutlined,
+    title: 'Contate-nos',
+    description: ['+ 1 202 345678', 'contact@doctorology.io']
+  },
+  {
+    icon: AimOutlined,
+    title: 'Localização',
+    description: ['Tv. Honório José dos Santos, 1000, CEP 66030-130']
+  },
+  {
+    icon: ClockCircleOutlined,
+    title: 'Horário de Funcionamento',
+    description: ['Seg - Sex: 8:00am à 5:00pm', 'Sab - Dom: Fechado']
+  }
+]  
