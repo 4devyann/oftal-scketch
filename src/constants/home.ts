@@ -55,7 +55,7 @@ export const contactUsItems: ContactUsComponentType[] = [
   {
     icon: MailOutlined,
     title: 'Contate-nos',
-    description: ['+ 1 202 345678', 'contact@doctorology.io']
+    description: ['+55 91 980804040', 'contato@mail.com']
   },
   {
     icon: AimOutlined,
