@@ -31,16 +31,7 @@ const LayoutCardComponent = ({
   const token = useTheme();
 
   return (
-    <Card
-      className={styles.card}
-      actions={[
-        <Space key={'space'}>
-          <EyeOutlined key='see-more' />
-          <Text className={styles.card__actions__text}>Visualizar</Text>
-        </Space>,
-      ]}
-      hoverable
-    >
+    <Card className={styles.card} hoverable>
       <Skeleton loading={loading} avatar active>
         <Meta
           avatar={
