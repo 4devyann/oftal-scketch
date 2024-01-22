@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './layout.module.scss';
 import HeaderComponent from '../shared/header/header.component';
 import LayoutCardComponent from './layout-card/layout-card.component';
-import { layoutItems } from '@/app/constants/layout';
+import { layoutItems } from '@/constants/layout';
 
 const LayoutComponent = () => {
   const [loading, setLoading] = useState(true);

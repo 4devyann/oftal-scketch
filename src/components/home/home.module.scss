@@ -1,1 +1,16 @@
+.home__content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
 
+  > div:nth-child(even) {
+    background-color: white;
+    width: 100%;
+  }
+
+  > div:nth-child(1) {
+    margin-bottom: 5rem;
+  }
+}
