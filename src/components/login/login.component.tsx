@@ -3,6 +3,7 @@
 import { Form, Input, Button, Typography } from 'antd';
 import { useRouter } from 'next/navigation';
 import styles from './login.module.scss';
+import { useTheme } from 'antd-style';
 
 const { Text } = Typography;
 
@@ -13,6 +14,7 @@ type FieldType = {
 
 export default function LoginComponent() {
   const router = useRouter();
+  const token = useTheme();
 
   const handleRedirect = (path: string) => {
     router.push(path);
@@ -67,6 +69,26 @@ export default function LoginComponent() {
             onClick={() => handleRedirect('cadastrar')}
           >
             Cadastre-se aqui
+          </Button>
+        </Form.Item>
+
+        <Form.Item
+          style={{
+            borderTop: '1px solid #d8eeff',
+            paddingTop: '2rem',
+          }}
+        >
+          <Button
+            type='dashed'
+            style={{
+              padding: 0,
+              width: '100%',
+              color: token.colorPrimary,
+              borderColor: '#d8eeff',
+            }}
+            onClick={() => handleRedirect('/')}
+          >
+            Retornar ao início
           </Button>
         </Form.Item>
       </Form>

@@ -3,6 +3,7 @@
 import { Form, Input, Button, Typography } from 'antd';
 import styles from './register.module.scss';
 import { useRouter } from 'next/navigation';
+import { useTheme } from 'antd-style';
 
 const { Text } = Typography;
 
@@ -14,14 +15,14 @@ type FieldType = {
 
 export default function RegisterComponent() {
   const router = useRouter();
-
-  const handleRedirect = () => {
-    router.push('login');
+  const token = useTheme();
+  const handleRedirect = (path: string) => {
+    router.push(path);
   };
 
   const onFinish = (values: any) => {
     console.log('Success:', values);
-    handleRedirect();
+    handleRedirect('login');
   };
 
   const onFinishFailed = (errorInfo: any) => {
@@ -65,6 +66,24 @@ export default function RegisterComponent() {
         <Form.Item>
           <Button block type='primary' htmlType='submit'>
             Cadastrar
+          </Button>
+        </Form.Item>
+        <Form.Item
+          style={{
+            borderTop: '1px solid #d8eeff',
+            paddingTop: '1.5rem',
+          }}
+        >
+          <Button
+            type='dashed'
+            style={{
+              width: '100%',
+              color: token.colorPrimary,
+              borderColor: '#d8eeff',
+            }}
+            onClick={() => handleRedirect('/')}
+          >
+            Retornar ao início
           </Button>
         </Form.Item>
       </Form>

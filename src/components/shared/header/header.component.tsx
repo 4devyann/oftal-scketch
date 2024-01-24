@@ -3,12 +3,14 @@ import { Layout, Typography, theme } from 'antd';
 import { useTheme } from 'antd-style';
 import { MenuOutlined, SketchOutlined } from '@ant-design/icons';
 import DrawerComponent from '@/components/drawer/drawer.component';
+import { useRouter } from 'next/navigation';
 
 const { Header } = Layout;
 const { Text } = Typography;
 
 const HeaderComponent = () => {
   const token = useTheme();
+  const router = useRouter();
 
   const [open, setOpen] = useState(false);
 
@@ -37,8 +39,14 @@ const HeaderComponent = () => {
           fontSize: 32,
           color: token.colorPrimary,
         }}
+        onClick={() => router.push('/')}
       />
-      <Text style={{ fontWeight: 'bold', fontSize: 24 }}>Oftal Sketch</Text>
+      <Text
+        style={{ fontWeight: 'bold', fontSize: 24 }}
+        onClick={() => router.push('/')}
+      >
+        Oftal Sketch
+      </Text>
       <DrawerComponent {...{ open, setOpen }} />
     </Header>
   );

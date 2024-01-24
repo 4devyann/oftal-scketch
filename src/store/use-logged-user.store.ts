@@ -29,3 +29,5 @@ const useLoggedUserStore = create(persist<State & Actions>(
   name: 'user-storage',
   storage: createJSONStorage(() => sessionStorage)
 }))
+
+export default useLoggedUserStore;
